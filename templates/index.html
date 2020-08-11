@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/socket.io.min.js"></script>
+    <script src="static/js/application.js"></script>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+</head>
+<body id="body">
+
+<div class="container" id="content">
+    <div class="row">
+        <button onclick="sendServer(escape('Hello '+aaa)); ">test</button>
+        <button onclick="sendServer('Form.MainForm.init', function(test){ console.log(test); },111,2222222)">Form.MainForm.init</button>
+        <button onclick="sendServer('test.init'); ">test</button>
+        <p>Asynchronous page updates will appear here:</p>
+        <h3>Number list:</h3>
+        <div id="log">
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
