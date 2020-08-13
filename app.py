@@ -6,8 +6,8 @@ import sys
 import io
 from contextlib import redirect_stdout
 
-__author__ = 'slynn'
 
+__author__ = 'slynn'
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 app.config['DEBUG'] = True

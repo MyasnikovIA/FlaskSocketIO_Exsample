@@ -1,5 +1,9 @@
+import parse
+
+
 def Designer():
-    return """object DesignForm: TRootForm
+    return """
+object DesignForm: TRootForm
   object HTMLEditText1: TButton
     Left = 56
     Top = 64
@@ -45,7 +49,8 @@ end"""
 
 
 def init(args):
-    print(Designer())
+    parse.DFM(Designer(), True)
+    # print(Designer())
 
 
 def getForm(args):
@@ -56,9 +61,9 @@ def getForm(args):
             continue
         if type(all_vars[key]).__name__ == 'function':
             continue
-        print(key, '->', type(all_vars[key]).__name__ )
+        print(key, '->', type(all_vars[key]).__name__)
         print(key, '->', all_vars[key])
-    print('================')
+    print('=====LOCAL===========')
 
     loc = locals().copy()
     for key in loc:
